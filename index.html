@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You 💖</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      text-align: center;
+      color: white;
+    }
+    h1 {
+      font-size: 4em;
+      animation: zoomIn 2s ease-out;
+    }
+    .heart {
+      position: absolute;
+      top: -10%;
+      animation: fall 5s linear infinite;
+      color: #ff4d4d;
+      font-size: 2em;
+    }
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(-10%);
+      }
+      100% {
+        transform: translateY(110vh);
+      }
+    }
+    .message {
+      font-size: 2em;
+      margin-top: 20px;
+      animation: fadeIn 3s ease-in;
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .button-container {
+      margin-top: 30px;
+    }
+    button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e60000;
+    }
+    .hidden {
+      display: none;
+    }
+    .paragraph {
+      font-size: 1.2em;
+      margin-top: 20px;
+      animation: slideIn 2s ease-out;
+    }
+    @keyframes slideIn {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hey, the best woman in this world 💖</h1>
+    <div class="button-container hidden" id="readyBox">
+      <p>Are you ready?</p>
+      <button onclick="showParagraph()">Yes!</button>
+    </div>
+    <div class="paragraph hidden" id="paragraph">
+      <!-- Replace this with your custom paragraph -->
+      <p style="font-style: italic;;">Hey Tanni, This is my first project. And in my heart, I always knew this had to be for you. Every word here is carefully chosen, not just to speak my mind, but to speak my heart—the place where you've always belonged. I don't know where to begin when it comes to you. You're not just beautiful—you're radiant. There's a glow in your smile that feels like sunshine warming my soul, a spark in your eyes that could light up the darkest corners of my world. You're strong, too—stronger than you know. You can achieve anything in this world Tanni. I admire the way you stand tall, no matter what life throws at you. You've always been this perfect blend of softness and strength, and honestly, it's breathtaking.
+         I know I wasn't perfect. I know you had your reasons for walking away, and I can't blame you for them. I carry those regrets with me every day. But please, don't ever doubt that my love for you was real. It wasn't fleeting or shallow—it was deep, pure, and unwavering. I loved you with a heart that wanted nothing more than to make you smile, to see you happy. And even now, with you no longer by my side, I still carry that love within me. It hasn't dimmed, it hasn't faded. If anything, it has only grown stronger in your absence.
+        I whisper a quiet prayer for you every day. I ask the universe to keep you safe, to fill your life with joy and comfort. I pray that you find success, that your dreams unfold before you like petals blooming in spring. And if I can ask you one thing, it's this—never, ever question how much you meant to me. No one in this world could ever take your place. No one could ever fill the space in my heart that belongs to you. You were, are, and will always be my one and only.
+         There may come a time when we drift even further apart, but I needed you to know this. You were unforgettable then, and you are unforgettable now. I will always carry the memories of our time together like precious treasures, and I will always cherish the love we shared.
+        So stay strong, stay radiant, and never forget how incredible you are. You will always have a special place in my heart, no matter where life takes us.
+        Take care. 💕</p>
+    </div>
+  </div>
+
+  <!-- Hearts falling in the background -->
+  <div class="heart" style="left: 10%; animation-delay: 0s;">❤️</div>
+  <div class="heart" style="left: 20%; animation-delay: 1s;">❤️</div>
+  <div class="heart" style="left: 30%; animation-delay: 2s;">❤️</div>
+  <div class="heart" style="left: 40%; animation-delay: 3s;">❤️</div>
+  <div class="heart" style="left: 50%; animation-delay: 4s;">❤️</div>
+  <div class="heart" style="left: 60%; animation-delay: 5s;">❤️</div>
+  <div class="heart" style="left: 70%; animation-delay: 6s;">❤️</div>
+  <div class="heart" style="left: 80%; animation-delay: 7s;">❤️</div>
+  <div class="heart" style="left: 90%; animation-delay: 8s;">❤️</div>
+
+  <script>
+    // Show the "Are you ready?" box after the initial message
+    setTimeout(() => {
+      document.getElementById('readyBox').classList.remove('hidden');
+    }, 3000);
+
+    // Show the paragraph when she clicks "Yes"
+    function showParagraph() {
+      document.getElementById('readyBox').classList.add('hidden');
+      document.getElementById('paragraph').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
